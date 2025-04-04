@@ -1,0 +1,14 @@
+services:
+  postgres:
+    image: postgres:17
+    container_name: event_service_db
+    environment:
+      POSTGRES_USER: eventuser
+      POSTGRES_PASSWORD: eventpass
+      POSTGRES_DB: event_service
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./data/postgresql:/var/lib/postgresql/data
+    restart: unless-stopped
+
