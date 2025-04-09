@@ -1,0 +1,6 @@
+[profiles.event_service]
+adapter = "postgres"
+theme = "catppuccin-mocha"
+limit = 100000
+keymap_name = ["vscode"]
+conn_str = ["postgres://eventuser:eventpass@localhost:5432/event_service"]
